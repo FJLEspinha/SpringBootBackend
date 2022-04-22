@@ -127,4 +127,12 @@ public class Ejercicio {
        }
        return web;
     }
+ //http://localhost:8080/chiste?texti= van 2 y se cae el del medio
+ @GetMapping("/chiste")
+ public String addJoke(@RequestParam String text){
+    //INSERT INTO joke (texxt) VALUES("XXXXXXX")
+    return "";
+ }
+    
+   
 }
