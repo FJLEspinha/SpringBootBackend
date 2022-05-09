@@ -16,4 +16,12 @@ public class Joke {
     Long id;
     @Column(nullable = false)
     String text;
+    
+    public String getText() {
+        return text;
+    }
+    public void setText(String text) {
+        this.text = text;
+    }
+    
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.example.demo.models.Person;
 import com.example.demo.services.RickAndMortyService;
+import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,5 +21,10 @@ public class WebController {
         ArrayList<Person> persons= rickAndMortyService.getCharactersFromAPI();
         model.addAttribute("persons", persons);
         return "rickandmorty";
+    }
+
+    @RequestMapping("/formulariochiste")
+    public String getFormularioChiste(Model model){
+        return "formularioInsercionChiste";
     }
 }
